@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ngnix-app
+spec:
+  volumes:
+    - name: mybest-storage
+      persistentVolumeClaim:
+        claimName: app-data-claim
+  containers:
+    - name: nginx-mytest
+      image: nginx
+      ports:
+        - containerPort: 80
+          name: "http-server"
+      volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: mybest-storage

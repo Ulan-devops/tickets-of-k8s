@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: ReplicaSet
+metadata:
+  labels:
+    name: rs-test
+  name: rs-test
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rs-test-pod
+  template:
+    metadata:
+      labels:
+        app: rs-test-pod
+    spec:
+      containers:
+      - image: nginx
+        name: k8-service
+        ports:
+        - containerPort: 8181
+          name: http
+          protocol: TCP

@@ -1,0 +1,1 @@
+The projected volume is a volume that projects several existing volume sources into the same directory. Currently, one can project configmaps, downward API, and secrets. The resulting pod spec is also shorter when projecting to a single volume as opposed to multiple different locations.

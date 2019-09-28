@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: ReplicaSet
+metadata:
+  labels:
+    name: nginx-dns
+  name: nginx-dns
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: nginx-dns-pod
+  template:
+    metadata:
+      labels:
+        name: nginx-dns-pod
+    spec:
+      containers:
+      resources:
+
+      - image: nginx
+        name: nginx-dns

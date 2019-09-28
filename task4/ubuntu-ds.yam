@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  labels:
+    name: ubuntu-ds
+  name: ubuntu-ds
+spec:
+  selector:
+    matchLabels:
+      name: ubuntu-ds-pod
+  template:
+    metadata:
+      labels:
+        name: ubuntu-ds-pod
+    spec:
+      containers:
+      - image: ubuntu
+        name: myubuntu
