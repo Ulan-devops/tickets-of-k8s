@@ -5,9 +5,9 @@
 	4. Kubectl get services -o wide
 	5. Kubectl get endpoints
 	So the system idea is you should more pay attention for labels only
-	Empemeral=keep changing ip of pods or died
+	Emphemeral=keep changing ip of pods or died
 	Services = are our load balancers
 	NodePort - is a service type
 	Load balancer has his own external IP
-	Behind load balance runs nodes ports
+	Behind load balance run nodes port
 Ingress send to service and service to pods
